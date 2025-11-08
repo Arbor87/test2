@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="js颜色.css">
+    <link rel="stylesheet" href="">
+    <script>
+    function myFunction(){
+      var sousuo=prompt("Search docx","搜索")
+    }
+</script>
+</head>
+<body> 
+    <header>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" placeholder="搜索" onclick="myFunction()"/>
+        </div>
+    </div>
+    <h1>v19.1</h1>
+    <nav><ul>
+            <li><a href="https://zh-hans.react.dev/learn">教程</a></li>
+            <li><a href="https://zh-hans.react.dev/reference/react">参考</a></li>
+            <li><a href="https://zh-hans.react.dev/community">社区</a></li>
+            <li><a href="https://zh-hans.react.dev/blog">博客</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main>
+    <section class="news">
+    <br>
+    <h2>React</h2>
+    <p>用于构建Web和原生交互界面的库</p>
+    <ul>
+      <li><a href="https://zh-hans.react.dev/learn" class="news11">学习 React</a>
+      <li><a href="https://zh-hans.react.dev/reference/react" class="news12">API参考</a></li>
+    </ul></section>
+
+    <section class="news2">
+    <h2>用组件创建用户界面</h2>
+    <p>React 让你可以通过组件来构建用户界面。你可以创建像 Thumbnail、LikeButton 和 Video 这样的组件。然后将它们组合成整个应用程序。</p>
+    
+
+  <div style="display: flex; gap: 20px; align-items: flex-start; max-width: 100%; overflow-x: auto;">
+  <div class="code-editor" style="flex: 1; min-width: 300px;">
+    <div class="editor-header">Video.js</div>
+    <div class="editor-content" id="codeContent" style="height: 400px; border: 1px solid #ccc; padding: 10px;">
+    </div>
+  </div>
+  <img src="wording_pic/1.png" alt="图片" class="picture1">
+  <div class="heart-container"style="position: relative;top:145px;right:96px">
+        <div id="heart-css"></div>
+    </div>
+
+    <!-- 此处运用ai -->
+    <script>
+        const heart = document.getElementById('heart-css');
+        heart.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    </script>
+  <script>
+    const originalCode = `function Video({ video }) {
+  return (
+    <div>
+      <Thumbnail video={video} />
+      <a href={video.url}>
+        <h3>{video.title}</h3>
+        <p>{video.description}</p>
+      </a>
+      <LikeButton video={video} />
+    </div>
+  );
+}`;
+    const escapedCode = originalCode
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+
+    const highlightedCode = escapedCode
+      .replace(/(function|return)/g, '<span class="keyword">$1</span>')
+      .replace(/(Video)/g, '<span class="function-name">$1</span>')
+      .replace(/(video)(\.\w+)?/g, '<span class="variable">$1$2</span>')
+      .replace(/(&lt;\/?)(div|a|h3|p)(\/?&gt;)/g, '$1<span class="jsx-tag">$2</span>$3')
+      .replace(/(&lt;\/?)(Thumbnail|LikeButton)(\/?&gt;)/g, '$1<span class="jsx-component">$2</span>$3')
+      .replace(/(href)=/g, '<span class="jsx-attribute">$1</span>=')
+      .replace(/([{}()];|=>)/g, '<span class="punctuation">$1</span>');
+
+    document.getElementById('codeContent').innerHTML = highlightedCode;
+  </script>
+    </section>
+    <section class="news21">
+    
+
+    </section>
+    <p>无论你是独自工作还是与成千上万的其他开发人员合作，使用 React 的感觉都是相同的。它旨在让你轻松地组合由独立开发者、团队或组织编写的组件。</p>
+    <section class="news3">
+    <h2>用代码和标签编写组件</h2>
+    <p>React 组件是 JavaScript 函数。想要有条件地显示一些内容吗？使用 if 语句。想要展示一个列表？尝试使用数组的 map() 方法。学习 React 就是学习编程。</p>
+    <img src="wording_pic/2.png" alt="图片"style="width: 100%;">
+    <p>这种标签语法被称为 JSX。它是由 React 推广的 JavaScript 语法扩展。将 JSX 标签与相关的渲染逻辑放在一起，使得创建、维护和删除 React 组件变得容易。</p>
+  
+  
+    </section>
+    <section class="news4">
+    <h2>在任何地方添加交互</h2>
+    <p>React 组件接收数据并返回应该出现在屏幕上的内容。你可以通过响应交互（例如用户输入）向它们传递新数据。然后，React 将更新屏幕以匹配新数据。</p>
+    <img src="wording_pic/3.png" alt="图片" style="width: 100%;">
+    
+    
+    <p>你也可以不用 React 去构建整个页面，而只是将 React 添加到现有的 HTML 页面中，在任何地方呈现交互式的 React 组件。</p>
+    <br>
+    <a href="https://zh-hans.react.dev/learn/add-react-to-an-existing-project"class="news4-button"><strong>/>将 React 添加到你已有的页面中></strong></a> 
+    
+    
+    </section>
+
+    <section class="news5">
+    <h2>使用框架进行全栈开发</h2>
+    <p>React 是一个库。它允许你将组件放在一起，但不关注路由和数据获取。要使用 React 构建整个应用程序，我们建议使用像 Next.js 或 Remix 这样的全栈 React 框架。</p>
+    <img src="wording_pic/4.png" alt="图片"style="width:100%">
+    <p>React 也是一种架构。实现它的框架可以在服务端甚至是构建阶段使用异步组件来获取数据，也可以从文件或数据库读取数据，并将其传递给交互式组件。</p>
+    <a href="https://zh-hans.react.dev/learn/start-a-new-react-project"class="news5-button"><strong>∴使用框架开始一个新项目</strong></a>
+
+    </section>
+    <section class="news6">
+    <h2>博采众长</h2>
+    <p>人们因为不同的原因偏好 Web 应用或原生应用。React 让你使用相同的技能构建 Web 应用程序和原生应用程序。它依赖于每个平台独特的优势，使你的界面就像原生一样。</p>
+    <img src="wording_pic/5.jpg" alt="图片"style="width: 100%;float:right">
+    <a href="https://reactnative.dev/" style="position: relative;top:-358px ;left: 875px;color: rgb(17, 136, 136);font-size: 25px;"class="http">React Native</a>
+    <a href="https://github.com/expo/expo" style="position: relative;top:-358px ;left:905px;color: rgb(17, 136, 136);font-size: 25px;" class="http">Expo</a>
+    <p>使用 React，你可以成为 Web 和原生应用的开发人员。 你的团队可以在不牺牲用户体验的情况下发布到各个平台。你的组织可以忽略平台差异，并拥有端到端的全部功能。</p>
+    <a href="https://reactnative.dev/"class="news6-button"><strong>为原生平台创建></strong></a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="wording_pic/6.jpg" alt="图片"style="width: 100%;float:right">
+    <a href="https://zh-hans.react.dev/blog/2025/04/23/react-labs-view-transitions-activity-and-more"style="position: relative;top:-440px;left:786px;font-size:29px;color:black"class="c"><strong>View Transitions <br>and Activity</strong></a>
+    <a href="https://zh-hans.react.dev/blog/2025/04/21/react-compiler-rc"style="position: relative;top:-478px;left:959px;font-size:29px;color:black"class="c"><strong>React Compiler RC</strong></a>
+    <a href="https://zh-hans.react.dev/blog/2025/02/14/sunsetting-create-react-app"style="position: relative;top:-267px;left:341px;font-size:22px;color:black"class="c"><strong>Sunsetting Creat React App</strong></a>
+    <a href="https://zh-hans.react.dev/blog/2024/12/05/react-19"style="position: relative;top:-267px;left:395px;font-size:27px;color:black;"class="c"><strong>React 19</strong></a>
+  </section>
+    </main>
+    <h2>加入数百万人的社区</h2>
+    <p>你并不孤单。每个月有来自世界各地的两百万开发者访问 React 文档。React 可以让人们达成共识。</p>
+  <footer>
+    <div class="swipe">
+      <input type="radio" name="indicator" id="indicator1" >
+      <label for="indicator1"></label>
+      <input type="radio" name="indicator" id="indicator2" >
+      <label for="indicator2"></label>
+      <input type="radio" name="indicator" id="indicator3" >
+      <label for="indicator3"></label>
+      <input type="radio" name="indicator" id="indicator4" >
+      <label for="indicator4"></label>
+      <input type="radio" name="indicator" id="indicator5" >
+      <label for="indicator5"></label>
+      <input type="radio" name="indicator" id="indicator6" >
+      <label for="indicator6"></label>
+      <input type="radio" name="indicator" id="indicator7" >
+      <label for="indicator7"></label>
+      <input type="radio" name="indicator" id="indicator8" >
+      <label for="indicator8"></label>
+
+      <ul>
+        <li class="pic1"></li>
+        <li class="pic2"></li>
+        <li class="pic3"></li>
+        <li class="pic4"></li>
+        <li class="pic5"></li>
+        <li class="pic6"></li>
+        <li class="pic7"></li>
+        <li class="pic8"></li>
+      </ul>
+
+
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded',(event)=>{
+        let currentIndex=0;
+        const inputs=document.querySelectorAll('input[name="indicator"]');
+        const totalSlides=inputs.length;
+
+        setInterval(()=>{
+          inputs[currentIndex].checked=false;
+          currentIndex=(currentIndex+1)%totalSlides;
+          inputs[currentIndex].checked=true;
+        },3000);
+      });
+    </script>
+  </footer>
+  <p>这就是为什么 React 不仅仅是一个库、一种架构，甚至不只是一个生态系统。React 是一个社区。在这里你可以寻求帮助，发现机会并结交新朋友。你将会遇到开发者和设计师、初学者和专家、研究人员和艺术家、教师和学生等各行各业的人士。我们的背景可能非常不同，但 React 让我们所有人都能够共同创建用户界面。</p>
+  <img src="wording_pic/7.jpg" alt="图片"style="width: 100%;float:right">
+  <a href="https://zh-hans.react.dev/learn"class="Zuihou-button"><strong>开启React之旅</strong></a>
+<table>
+  <tr>
+    <th><a href="https://zh-hans.react.dev/learn">学习Reac</a>t</th>
+    <th><a href="https://zh-hans.react.dev/reference/react">API参考</a></th>
+    <th><a href="https://zh-hans.react.dev/community">社区</a></th>
+    <th>了解更多</th>
+  </tr>
+  <tr>
+    <td><a href="https://zh-hans.react.dev/learn">快速入门</a></td>
+    <td><a href="https://zh-hans.react.dev/reference/react">React API</a></td>
+    <td><a href="https://github.com/facebook/react/blob/main/CODE_OF_CONDUCT.md">行为准则</a></td>
+    <td><a href="https://zh-hans.react.dev/blog">博客</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://zh-hans.react.dev/learn/installation">安装</a></td>
+    <td><a href="https://zh-hans.react.dev/reference/react-dom">React DOM API</a></td>
+    <td><a href="https://zh-hans.react.dev/community/team">团队</a></td>
+    <td><a href="https://reactnative.dev/">React Native</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://zh-hans.react.dev/learn/describing-the-ui">描述UI</a></td>
+    <td><a href="#"></a></td>
+    <td><a href="https://zh-hans.react.dev/community/docs-contributors">文档贡献者</a></td>
+    <td><a href="https://opensource.facebook.com/legal/privacy">隐私政策</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://zh-hans.react.dev/learn/adding-interactivity">添加交互</a></td>
+    <td><a href="#"></a></td>
+    <td><a href="https://zh-hans.react.dev/community/acknowledgements">鸣谢</a></td>
+    <td><a href="https://opensource.fb.com/legal/terms/">条款</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://zh-hans.react.dev/learn/managing-state">状态管理</a></td>
+    <td><a href="#"></a></td>
+    <td><a href="#"></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://zh-hans.react.dev/learn/escape-hatches">脱围机制</a></td>
+    <td><a href="#"></a></td>
+    <td><a href="#"></a></td>
+    <td><a href="#"></a></td>
+  </tr>
+</table>
+
+</body>
+</html>
